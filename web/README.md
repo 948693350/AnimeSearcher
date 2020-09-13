@@ -19,5 +19,5 @@
 - fixed bugs @2020-09-11
 
 ### About
-前端开源：!(AnimeSearcherUI)[https://github.com/Cangqifeng/AnimeSearcherUI]
+前端开源：![AnimeSearcherUI](https://github.com/Cangqifeng/AnimeSearcherUI)
 
