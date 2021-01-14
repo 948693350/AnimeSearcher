@@ -1,72 +1,122 @@
-<p align="center"><img src="https://ae01.alicdn.com/kf/U150c6f229b47468781c941fdd80545eak.png" width="200"></p>
-<h3 align="center">- Anime Searcher -</h3>
-<p align="center">
-<img src="https://img.shields.io/github/v/release/zaxtyson/AnimeSearcher.svg?logo=bilibili">
-</p>
+# Web UI
 
-## 简介
+AnimeSearcher前端UI项目
 
-通过整合第三方网站的视频和弹幕资源, 提供最舒适的看番体验~
-
-番剧、国漫、电影、美剧、日剧、韩剧、泰剧，应有尽有，甚至还可以看 CCTV 和地方卫视台~
-
-资源丰富, 更新超快, 不用下载, 在线观看, 再也不用去那些飘满广告的网站或者网盘找资源了
-
-自动匹配第三方网站的弹幕, 看番怎能少了弹幕, 就算是白嫖我们也要嫖出 VIP 一般的体验( •̀ ω •́ )✧
+By Lozyue
 
 
-## 界面
+## Project setup
+```
+npm install
+```
 
-![1.png](https://s1.ax1x.com/2020/10/25/BmtcfP.png)
-![2.png](https://s1.ax1x.com/2020/10/25/BmtBeH.png)
-![3.png](https://s1.ax1x.com/2020/10/25/BmtrTA.png)
-![4.png](https://s1.ax1x.com/2020/10/25/BmtyFI.png)
-![5.png](https://s1.ax1x.com/2020/10/25/Bmt6Yt.png)
-![6.png](https://s1.ax1x.com/2020/10/25/BmtDwd.png)
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
 
-## 维护
-- [lozyue](https://github.com/Cangqifeng) : 前端 UI 界面
-- [zaxtyson](https://github.com/zaxtyson) : 后端 API 框架
+### Compiles and minifies for production
+```
+npm run build
+```
 
-## 下载
+### Lints and fixes files
+```
+npm run lint
+```
 
-- Linux 用户 clone 后运行 `run.py` 即可
-- Windows 用户[点这里下载](https://zaxtyson.lanzous.com/b0f1ukafc)
+Year, Nothing need to do haha！
 
-## 扩展
+It's just a simple Vue3.0 project. Easy to Modify & Build.
 
-如果你有好康的网站, 可以编写资源引擎添加到本项目, [详情](https://github.com/zaxtyson/Anime-API)
 
-## 更新日志
+## 技术依赖
 
-### `v1.1.8`
+- 核心基于非完全MVVM框架 `Vue`
+- 前端路由`vue-router`
+- Material Design Component `Vuetify`
+- Promise 的 HTTP 通信组件库 `axios`
+- H5弹幕播放器 `DPlayer`
+- 加载条 `NProgress`
 
-- 新增引擎 k1080p
-- 修复 youku 某些弹幕解析失败的问题
-- 修复 bilibili 用户上传视频弹幕解析失败的问题
-- 修复 bahamut 网站更新导致弹幕抓取失败的问题
-- 搜索结果异步加载, 体验大幅上升
-- 历史记录功能增强, 自动解析上次访问页面
-- 界面、播放器、弹幕显示、快捷键等多处细节优化
-- 程序主界面不再显示控制台
 
-### `v1.0.0`
+### Release
 
-- 修复 agefans 无法访问的问题(被墙)
-- 外挂弹幕支持
-- 弹幕显示优化
-- 支持播放历史记录
+- v1.0.1 @2021-01-06
 
-### `v0.9.9`
+- v1.0.0 @2020-14-25
 
-- 修复 Windows 安装版中弹幕源 bahamut 繁简体转换异常的问题
-- 修复引擎 bimibimi 部分视频解析失败的问题和弹幕 undefined 的问题
-- 修复 zzfun 接口变化导致无法播放视频的问题
-- 修复 agefans 视频无法解析的问题
-- 新增弹幕源 youku
-- 新增弹幕源 tencent
-- 新增资源引擎 meijuxia
-- 补充 bilibili 影视区弹幕
-- UI 美化, 新增一套主题
-- 主页番剧更新列表
-- IPTV 直播(CCTV/地方台)
+- v0.9.9 @2020-10-25
+
+- v0.9.8 差点正式版
+
+- v0.9.6 体验版
+
+- v0.9.5 不正式体验版
+
+- v0.9.3 beta弹幕体验版
+
+- v0.9.0 beta体验版
+
+
+### Process
+
+@2021-01-13 update 1.1.8-fixed
+- √ 修复弹幕自动匹配失败后手动选择弹幕集按钮点击无效的问题和部分浏览器按钮排列乱序问题
+
+@2021-01-11 update 1.2.0
+- √ 增加搜素结果异步显示的支持,拒绝漫长等待,搜索更丝滑
+- √ 完善历史记录,增强后端支持的详情页解析,历史播放更便捷
+- √ 修复弹幕库未加载完立即(过早？)点击视频时自动弹幕匹配失败的问题
+- √ 历史记录的保存数量限制开放到32条最多
+
+@2021-01-09 update 1.1.4
+- √ 增加快捷键上一集`[`和下一集`]` 的事件接口
+- √ 播放页支持快捷键上一集`[`和下一集`]`
+- √ 主页其他设置模块增加[用户体验改进计划]和[沉浸模式]选项的快捷开关按钮
+- √ 优化增强：上一集下一集的顺序主观跟随右侧[选集列表]排序
+
+@2021-01-06 update 1.1.0
+- √ 加入Half-virtual-scroll的弹幕列表Display面板
+- √ 播放器暂停增加bili小图标
+- √ 调整弹幕字体大小，默认20px，页面或网页全屏时自动调整至22px
+- √ 增强了消息条模块和action消息队列的核心支持。
+- √ 播放页增加宽屏模式支持
+- √ 调整Dplayer的设置面板，增加自动播放按键，调整弹幕开关位置,清除初始化的空请求错误。
+- √ 修复无效空历史保存的bug，匹配增加按线路匹配优先，为未来按引擎搜索适配铺平道路。
+
+- v1.0.0 Updated @2020-12-15
+	- √ 增加观看记录提示消息条回调点击事件，支持直接跳转
+	- √ 增加快捷键F、W切换网页全屏和页面全屏，全屏时鼠标中键滚动可调整音量
+	- √ 修复了增强了更新检测算法，可检测到子版本
+	- √ 加入首页观看历史记录展示修改面板
+	- √ 合并弹幕player消息条hover滚动
+	- √ 修复读取存储播放设置为空时产生的中断
+
+- v1.0.0-beta 
+	- 优化了播放器设置项
+	- 修改Dplayer样式，移除多余按钮，弹幕样式速度和UI显示优化，倍速移动到外部
+	- 增加本地观看历史记录，最多保存16个
+	- 自动检测跳转上次播放进度并提示;搜索结果组件home也结果卡片比例调整，强制等高（Description部分可能会部分遮挡,等待重构）
+
+- fixed bugs 弹幕自动匹配去掉了每轮进行的准确度过低数字搜索匹配，修改了footerMsg错序的问题；修正排序或逆序时右侧选集框定位滞留问题；优化换集显示 @2020-10-21
+
+- v0.9.9 更新！增加了TV板块，优化各种设置项，集成消息队列核心支持搜索弹幕源，增加沉浸模式，增加弹幕的分类开关，增加新番表 @2020-10-21
+
+- 增加了主题切换美化界面，增加了点击定位，追海贼王等长剧不用再苦翻列表了；修复选择弹幕，工具栏设置不同步等一些bug，增强弹幕匹配规则 @2020-10-01
+
+- fixed some bugs @2020-09-11
+
+- v0.9.8优化了排序的实现方法。为搜索记录增加单条删除键。视频页回车搜索新窗口打开。重构了搜索结果路由，前后前进更流畅。
+
+- v0.9.7增加简单搜索记录，更新了HelloWorld页，为Home页卡片增加默认图（手动PS的哦）,更改了排序方式,补充了弹幕引擎设置
+
+- v0.9.6修复限流造成的切换代理失败及代理时手动选择弹幕卡住的bugs
+
+- v0.9.5完成了工具栏的各小按钮功能，选择弹幕功能。优化细节，修复几个bugs
+
+- v0.9.4再次增强了自动匹配，增加了nprogress加载条，选集按钮标题修改，Dplayer出错回调增加节流限制，增加视频底部工具栏，选择弹幕功能暂未完成。
+
+- v0.9.3增加了视频弹幕，自动匹配当前弹幕。略优化了Dplayer错误处理（暂未做限流throttle处理）@2020-08-30
+
+- v0.9.1增加了配置项，修复代理通道无法切换的bug，任存在切换卡住的dplayer内部bug，再次手动选集可缓解。
